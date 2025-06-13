@@ -8,17 +8,23 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body id="background">
+
+
+
+
+
+
     <div class="sidenav" id="navbar">
         <h2>Artioart</h2>
-        <a href="#" id="link1"> Home</a>
-        <a href="#" id="link2"> Stories</a>
-        <a href="#" id="link3"> Store</a>
-        <a href="#" id="link4"> Artists</a>
-        <a href="#" id="link5"> Awards</a>
-        <a href="advert.html" id="link6"> Advert</a>
-        <a href="#" id="link7"> Sources</a>
-        <a href="#" id="link8"> Featured Artist</a>
+        <a href="#" id="link1" class="nav-link"> Home</a>
+        <a href="#" id="link2" class="nav-link"> Stories</a>
+        <a href="#" id="link3" class="nav-link"> Store</a>
+        <a href="#" id="link4" class="nav-link"> Artists</a>
+        <a href="#" id="link5" class="nav-link"> Awards</a>
+        <a href="advert.html" class="nav-link"> Advert</a>
+        <a href="#" id="link7" class="nav-link"> Sources</a>
+        <a href="#" id="link8" class="nav-link"> Featured Artist</a>
     </div>
 
 
@@ -26,15 +32,34 @@
 
 
     <div class="main">
-        <div class="navbar">
+        <!-- <div class="navbar">
             <h1>JOB</h1>
+            <br>
             <nav>
                 <a href="#">Home</a>
                 <a href="#">Artists</a>
                 <a href="#">Store</a>
                 <a href="#">Gallery</a>
             </nav>
-        </div>
+        </div> -->
+        <!-- === HEADER === -->
+        <header class="header" data-header>
+            <div class="container">
+                <!-- <a href="#" class="logo">Grilli</a> -->
+
+                <nav class="second-navbar" data-navbar>
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="#about" class="nav-link">Artist</a></li>
+                        <li><a href="#menu" class="nav-link">Awards</a></li>
+                        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+
+            </div>
+        </header>
 
 
 
@@ -66,11 +91,11 @@
 
 
     <!-- Overlay -->
-    <div id="signin-overlay" class="overlay ">
+    <!-- <div id="signin-overlay" class="overlay ">
         <h2>Please Sign in Now</h2>
         
         <button id="signin-btn-overlay" class="now">Sign in</button>
-    </div>
+    </div> -->
 
     <!-- Actual Sign-in Form -->
     <div id="signin-form" class="form-section ">
@@ -92,13 +117,13 @@
                 </form>
                 <br>
                 <div class="footer-text">
-                    Don't have an account? <a href="Signup.html">Sign up</a>
+                    Don't have an account? <a href="Signup.html" class="Link-sign">Sign up</a>
                 </div>
             </div>
         </form>
     </div>
     <script src="js/script.js"></script>
-    
+
 </body>
 
 </html>
