@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artioart: Contact</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body id="body" class="body-img">
+     <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="logo">
+            <h1>Artioart</h1>
+        </div>
+    </div>
+    <!-- === HEADER === -->
+    <header class="header" data-header>
+        <div class="container">
+
+
+            <nav class="second-navbar" data-navbar>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">Artist</a></li>
+                    <li><a href="#menu" class="nav-link">Awards</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mode-toggle" onclick="toggleMode()">🌙 Toggle Mode</button>
+
+
+        </div>
+    </header>
+
+    <div class="contact-container">
+        <form action="" class="contact-form" method="post" id="contactForm">
+            <label for="Name">Name</label>
+            <input type="text" placeholder="Your Name" required>
+            <br>
+            <label for="Email">Email</label>
+            <input type="email" name="" id="" required placeholder="Your Email">
+            <br>
+            <label for="Country">Country</label>
+            <select name="" id="" required>
+                <option value="">Nigeria</option>
+                <option value="">Ghana</option>
+                <option value="">Canada</option>
+                <option value="">Egypt</option>
+                <option value="">China</option>
+                <option value="">Austrilia</option>
+                <option value="">Luxumbug</option>
+            </select>
+            <br><br>
+            <textarea name="" id="" placeholder="Message" required></textarea>
+            <br>
+
+
+        </form>
+
+        <div class="text-contact">
+            <h1>Contact Us</h1>
+            <blockquote class="blockquote">
+                Want to showcase your art or ask us something? <br>
+                We'd Love to hear from you.
+            </blockquote>
+            <br>
+            Location
+            <br>
+            <br>
+            Lagos Nogeria, st Subway <br>
+            <br>
+            +234 123 098 765
+            <div style="text-align: center;">
+                <a href="#" class="cta-button">Book an Art Session</a>
+            </div>
+            <button type="submit" class="btn-sub">
+                <div style="text-align: center;">
+                    <a href="#" class="cta-button" onclick="sendMessage()">Send message</a>
+                </div>
+            </button>
+            <p class="formResponse"></p>
+        </div>
+    </div>
+    <a href="text.html">Link for text</a>
+    <footer>
+        &copy; Created by Anyikwa Bruno 2025 Artful Vision | <a href="#">Privacy Policy</a>
+    </footer>
+    <script>
+
+        // // Simple JavaScript for the contact form submission
+        // document.getElementById('contactForm').addEventListener('submit', function (event) {
+        //     event.preventDefault();
+        //     // You can connect this to a back-end service or an API to handle emails
+        //     document.getElementById('formResponse').textContent = "Thank you for getting in touch! We will respond as soon as possible.";
+        //     this.reset();
+
+
+        // });
+
+         window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            const content = document.querySelector(".main-content");
+
+            setTimeout(() => {
+                preloader.classList.add("slide-down");
+                setTimeout(() => {
+                    preloader.style.display = "none";
+                    content.style.display = "block";
+                }, 1000); // wait for slide up transition
+            }, 2500); // stay on screen for 2.5 seconds
+        });
+        // Dark mode toggle
+        function toggleMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+<!-- 
+
+// // if (send) {
+// //   send.addEventListener("click", () => {
+// //    console.log();
+// //    result = "THank's For your info we'ill gwt in touch soon";
+// //     result.textContent = toString();
+// //   });
+// // }
+
+
+// const result = document.getElementById("result");
+// const send = document.getElementById("send");
+// let message = "";
+// function SendMessage() {
+//   message = "Thank's for your info we'ill get in touch soon!";
+//   result.textContent = message.toString();
+//   result.style.color = "green"
+// };
+
+// send.addEventListener("click", SendMessage()); -->

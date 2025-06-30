@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Side Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: tan;
+            font-family: Arial, sans-serif;
+        }
+
+         /* === HEADER === */
+        .container {
+            width: 100%;
+        } 
+ .header {
+   position: fixed;
+   width: 100%;
+   top: 0;
+   z-index: 1000;
+   background-color: rgba(0, 0, 0, 0.808);
+   padding: 1rem 2rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ .header .logo {
+   font-size: 1.5rem;
+   color: white;
+   font-weight: bold;
+ }
+
+ .navbar {
+   display: none;
+ }
+
+ .navbar.active {
+   display: block;
+ }
+
+ .nav-list {
+   display: flex;
+   gap: 2rem;
+   background-color: transparent;
+ }
+
+ .nav-link {
+   color: white;
+   font-size: 1rem;
+ }
+
+ .nav-toggle {
+   font-size: 1.5rem;
+   background: none;
+   border: none;
+   color: white;
+   cursor: pointer;
+   display: block;
+ }
+
+        /* Side Navbar */
+        #side-navbar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            /* Hidden off-screen initially */
+            width: 250px;
+            height: 100%;
+            background: #222;
+            display: flex;
+            flex-direction: column;
+            padding-top: 2rem;
+            transition: left 0.7s ease;
+        }
+
+        #side-navbar a {
+            padding: 1rem;
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid #444;
+        }
+
+        /* Active Class: Show Navbar */
+        #side-navbar.active {
+            left: 0;
+        }
+        /* Display Class : hide Navbar */
+        #side-navbar .display {
+            display: none;
+            left: -250px;
+        }
+        
+#menu-button {
+    width: 50px;
+    height: 50px;
+    background: black;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+    margin-top: 80px;
+   
+    
+}
+
+
+#menu-button img {
+    width: 20px;
+    margin-top: 15px;
+}
+    </style>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+ <div class="content" id="mainContent">
+        <div class="sidenav" id="navbar">
+            <h2>Artioart</h2>
+            <a href="#" id="link1" class="nav-link"> Home</a>
+            <a href="#" id="link2" class="nav-link"> Stories</a>
+            <a href="#" id="link3" class="nav-link"> Store</a>
+            <a href="#" id="link4" class="nav-link"> Artists</a>
+            <a href="awards.html" id="link5" class="nav-link"> Awards</a>
+            <a href="advert.html" class="nav-link"> Advert</a>
+            <a href="#" id="link7" class="nav-link"> Sources</a>
+            <a href="#" id="link8" class="nav-link"> Featured Artist</a>
+        </div>
+        <div class="main">
+
+            <!-- === HEADER === -->
+            <header class="header" data-header>
+                <div class="container">
+
+
+                    <nav class="second-navbar" data-navbar>
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">Home</a></li>
+                            <li><a href="#about" class="nav-link">Artist</a></li>
+                            <li><a href="awards.html" class="nav-link">Awards</a></li>
+                            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                            <li><a href="contact.html" class="nav-link">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    
+                    
+                </div>
+            </header>
+            
+            
+            <!-- Mock Image / Menu Button -->
+            <div id="menu-button">
+                <img src="images/menu.png" alt="" id="menu">
+            </div>
+            
+            <button class="mode-toggle" onclick="toggleMode()">🌙 Toggle Mode</button>
+    
+    <!-- Side Navbar -->
+    <nav id="side-navbar">
+       <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <script>
+        
+        const menuButton = document.getElementById('menu-button');
+        const sideNavbar = document.getElementById("side-navbar");
+   sideNavbar.style.left = "-250px"
+       menuButton.onclick =  () => {
+        if (sideNavbar.style.left === "-250px") {
+            sideNavbar.style.left = "0px";
+            menu.src = "./images/close.png";
+        } else {
+            sideNavbar.style.left = "-250px"
+            menu.src = "./images/menu.png"
+        }
+       }
+
+//   if (menuButton) {
+//     menuButton.addEventListener("click", function (event) {
+//         event.preventDefault();
+//     });
+
+//     if (sideNavbar.style.left === "-250px") {
+//     sideNavbar.style.left = "0px";
+//   } else {
+//       sideNavbar.style.left = "-250px";
+//   };
+
+//   };
+//     //     const btn = document.getElementById("btn");
+    //  if (menuButton.addEventListener("click", function (event) {
+    //     event.preventDefault();
+    //     sideNavbar.classList.add("active");
+    // })) {
+    //     sideNavbar.classList.remove("active");
+    // } 
+    
+        // menuButton.addEventListener('click', function (event) {
+        //     event.preventDefault(); // Prevent the anchor from jumping
+        //     sideNavbar.classList.toggle('active'); // Toggle sidebar
+        // });
+        
+        // function closeMenu() {
+            
+        //     const sideNavbar = document.getElementById('side-navbar');
+        //     const menuButton = document.getElementById('menu-button');
+
+        //     menuButton.addEventListener("click", function (event) {
+        //         event.preventDefault(); 
+        //         sideNavbar.classList.toggle("display");
+        //     });
+        // };
+    </script>
+</body>
+
+</html>

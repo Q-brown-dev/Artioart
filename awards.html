@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="logo">
+            <h1>Artioart</h1>
+        </div>
+    </div>
+
+    <!-- === HEADER === -->
+    <header class="header" data-header>
+        <div class="container">
+
+
+            <nav class="second-navbar" data-navbar>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">Artist</a></li>
+                    <li><a href="awards.html" class="nav-link">Awards</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="mode-toggle" onclick="toggleMode()">🌙 Toggle Mode</button>
+
+
+        </div>
+    </header>
+    <section class="awards-section">
+        <h2>🏅 ArtioArt Achievements</h2>
+        <div class="awards-grid">
+            <div class="award-card">
+                <h3>Best Creative Artist</h3>
+                <p>Won at Lagos Art Festival 2024</p>
+            </div>
+            <div class="award-card">
+                <h3>Top 10 Digital Designers</h3>
+                <p>Featured in ArtHub Magazine</p>
+            </div>
+            <div class="award-card">
+                <h3>People's Choice Award</h3>
+                <p>Art Week Online, 2023</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Dark mode toggle
+        function toggleMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            const content = document.querySelector(".main-content");
+
+            setTimeout(() => {
+                preloader.classList.add("slide-down");
+                setTimeout(() => {
+                    preloader.style.display = "none";
+                    content.style.display = "block";
+                }, 1000); // wait for slide up transition
+            }, 2500); // stay on screen for 2.5 seconds
+        });
+
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

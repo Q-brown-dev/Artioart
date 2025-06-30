@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            color: white;
+            padding: 15px 20px;
+            position: relative;
+
+        }
+
+        .logo {
+            font-size: 1.5rem;
+        }
+
+        .menu-icon {
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 999;
+        }
+
+        .bar {
+            height: 4px;
+            width: 100%;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 5px;
+        }
+
+        /* Animate to X */
+        .menu-icon .active .top-bar {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-icon .active .middle-bar {
+            opacity: 0;
+        }
+
+        .menu-icon .active .bottom-bar {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .nav-links {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            height: 100vh;
+            width: 200px;
+            background-color: #333;
+            list-style: none;
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            transition: right 0.4s ease;
+        }
+
+        .nav-links .active {
+            right: 0;
+        }
+
+        .nav-links li {
+            padding-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f0a500;
+        }
+
+        /* Hide menu icon on desktop */
+        @media (min-width: 768px) {
+            .menu-icon {
+                display: none;
+            }
+
+            .nav-links {
+                position: static;
+                height: auto;
+                width: auto;
+                flex-direction: row;
+                background-color: transparent;
+                padding-top: 0;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">MySite</div>
+        <div class="menu-icon" id="menuIcon">
+            red
+            <div class="bar top-bar">&#9776;</div>
+            <div class="bar middle-bar">&times;</div>
+            <div class="bar bottom-bar">&#9776;</div>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        const menuIcon = document.getElementById("menuIcon");
+        const navLinks = document.getElementById("navLinks");
+        menuIcon.addEventListener("click", () => {
+            menuIcon.classList.toggle("active");
+            navLinks.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>

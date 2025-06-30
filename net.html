@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ArtioArt Preloader</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #f7e9e5, #fffdfc);
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  z-index: 9999;
+  transition: transform 1s ease-in-out;
+}
+
+.preloader.slide-up {
+  transform: translateY(-100%);
+}
+
+.main-content {
+  padding: 60px 20px;
+  text-align: center;
+  display: none;
+}
+
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <h1>ArtioArt</h1>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Welcome to ArtioArt</h1>
+    <p>Explore stunning artworks, portfolios, and awards.</p>
+  </div>
+
+  <script> 
+    window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  const content = document.querySelector(".main-content");
+
+  setTimeout(() => {
+    preloader.classList.add("slide-up");
+    setTimeout(() => {
+      preloader.style.display = "none";
+      content.style.display = "block";
+    }, 1000); // wait for slide up transition
+  }, 2500); // stay on screen for 2.5 seconds
+});
+  </script>
+  <!-- <script src="script.js"></script> -->
+</body>
+</html>
