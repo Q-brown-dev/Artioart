@@ -8,122 +8,174 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body id="background">
+<body>
 
-
-
-
-
-
-    <div class="sidenav" id="navbar">
-        <h2>Artioart</h2>
-        <a href="#" id="link1" class="nav-link"> Home</a>
-        <a href="#" id="link2" class="nav-link"> Stories</a>
-        <a href="#" id="link3" class="nav-link"> Store</a>
-        <a href="#" id="link4" class="nav-link"> Artists</a>
-        <a href="#" id="link5" class="nav-link"> Awards</a>
-        <a href="advert.html" class="nav-link"> Advert</a>
-        <a href="#" id="link7" class="nav-link"> Sources</a>
-        <a href="#" id="link8" class="nav-link"> Featured Artist</a>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="circle"></div>
+        <p class="text logo">Artioart</p>
     </div>
 
 
-    </div>
 
 
-    <div class="main">
-        <!-- <div class="navbar">
-            <h1>JOB</h1>
-            <br>
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Artists</a>
-                <a href="#">Store</a>
-                <a href="#">Gallery</a>
-            </nav>
-        </div> -->
-        <!-- === HEADER === -->
-        <header class="header" data-header>
-            <div class="container">
-                <!-- <a href="#" class="logo">Grilli</a> -->
-
-                <nav class="second-navbar" data-navbar>
-                    <ul class="nav-list">
-                        <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li><a href="#about" class="nav-link">Artist</a></li>
-                        <li><a href="#menu" class="nav-link">Awards</a></li>
-                        <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                        <li><a href="#contact" class="nav-link">Contact</a></li>
-                    </ul>
-                </nav>
-
-
-            </div>
-        </header>
-
-
-
-
-        <h2 style="margin-bottom: 1rem;"> Featured Artists</h2>
-        <div class="featured">
-            <div class="card">
-                <img src="images/Screenshot_2025_0609_222641.png" alt="Artwork">
-                <h3>Painting</h3>
-            </div>
-            <div class="card">
-                <img src="images/digital-illustration-brian-edward-miller-1280x720.jpg" alt="Artwork">
-                <h3>Digital Art</h3>
-            </div>
-            <div class="card">
-                <img src="images/Sculpture.png" alt="Artwork">
-                <h3>Sculpture</h3>
-            </div>
-            <div class="card">
-                <img src="images/Screenshot_2025_0609_222135.png" alt="Artwork">
-                <h3>Modern Art</h3>
-            </div>
-            <div class="card">
-                <img src="images/Screenshot_2025_0609_222913.png" alt="">
-                <h3>Music</h3>
-            </div>
+    <div class="content" id="mainContent">
+        <div class="sidenav" id="navbar">
+            <h2>Artioart</h2>
+            <a href="#" id="link1" class="nav-link"> Home</a>
+            <a href="#" id="link2" class="nav-link"> Stories</a>
+            <a href="#" id="link3" class="nav-link"> Store</a>
+            <a href="#" id="link4" class="nav-link"> Artists</a>
+            <a href="awards.html" id="link5" class="nav-link"> Awards</a>
+            <a href="advert.html" class="nav-link"> Advert</a>
+            <a href="#" id="link7" class="nav-link"> Sources</a>
+            <a href="#" id="link8" class="nav-link"> Featured Artist</a>
         </div>
-    </div>
+        <div class="main">
+
+            <!-- === HEADER === -->
+            <header class="header" data-header>
+                <div class="container">
 
 
-    <!-- Overlay -->
-    <!-- <div id="signin-overlay" class="overlay ">
-        <h2>Please Sign in Now</h2>
-        
-        <button id="signin-btn-overlay" class="now">Sign in</button>
-    </div> -->
+                    <nav class="second-navbar" data-navbar>
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">Home</a></li>
+                            <li><a href="#about" class="nav-link">Artist</a></li>
+                            <li><a href="awards.html" class="nav-link">Awards</a></li>
+                            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                            <li><a href="contact.html" class="nav-link">Contact</a></li>
+                        </ul>
+                    </nav>
 
-    <!-- Actual Sign-in Form -->
-    <div id="signin-form" class="form-section ">
-        <form>
-            <div class="signin-box">
-                <h2>job </h2>
-                <form>
-                    <div id="sign"></div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" placeholder="you@example.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" placeholder="•••••••" required>
-                    </div>
+                    <button class="mode-toggle" onclick="toggleMode()">🌙 Toggle Mode</button>
 
-                    <button type="submit" class="signin-btn">Sign In</button>
-                </form>
-                <br>
-                <div class="footer-text">
-                    Don't have an account? <a href="Signup.html" class="Link-sign">Sign up</a>
+
+                </div>
+            </header>
+
+
+
+
+            <h2 class="featured-text"> Featured Artists</h2>
+            <div class="featured">
+                <div class="card">
+                    <img src="images/Screenshot_2025_0609_222641.png" alt="Artwork">
+                    <h3>Painting</h3>
+                </div>
+                <div class="card">
+                    <img src="images/Sculpture2 (1).png" alt="Artwork">
+                    <h3>Digital Art</h3>
+                </div>
+                <div class="card">
+                    <!-- <img src="images/Sculpture.png" alt="Artwork"> -->
+                    <!-- <img src="images/Sculpture2 (2).png" alt="Artwork"> -->
+                    <img src="images/imag (2).png" alt="Artwork">
+                    <h3>Sculpture</h3>
+                </div>
+                <div class="card">
+                    <!-- <img src="images/Screenshot_2025_0609_222135.png" alt="Artwork"> -->
+                    <!-- <img src="images/Sculpture2 (15).png" alt="Artwork"> -->
+                    <!-- <img src="images/Sculpture2 (3).png" alt="Artwork"> -->
+                    <img src="images/Photo_1751142515171.png" alt="Artwork">
+                    <h3>Modern Art</h3>
+                </div>
+                <div class="card">
+                    <!-- <img src="images/Screenshot_2025_0609_222913.png" alt=""> -->
+                    <img src="images/Image.png" alt="">
+                    <h3>Music</h3>
+                </div>
+                <div class="card">
+                    <!-- <img src="images/Screenshot_2025_0609_222913.png" alt=""> -->
+                    <img src="images/Sculpture2 (6).png" alt="">
+                    <h3>Music</h3>
                 </div>
             </div>
-        </form>
-    </div>
-    <script src="js/script.js"></script>
+        </div>
 
+
+
+        <!-- Actual Sign-in Form -->
+        <div id="signin-form" class="form-section ">
+            <form>
+                <div class="signin-box">
+                    <h2>job </h2>
+                    <form>
+                        <div id="sign"></div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="•••••••" required>
+                        </div>
+
+                        <a href="cookies.html"><button type="submit" class="signin-btn" id="info">Sign In</button></a>
+                    </form>
+                    <br>
+                    <div class="footer-text">
+                        Don't have an account? <a href="Signup.html" class="Link-sign">Sign up</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+
+    <audio id="bg-music" loop autoplay>
+        <source src="music.mp3.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="music-toggle" onclick="toggleMusic()">🔊 Music On</button>
+
+    <script>
+        const music = document.getElementById("bg-music");
+        const musicToggle = document.getElementById("music-toggle");
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                musicToggle.innerText = "🔊 Music On";
+            } else {
+                music.pause();
+               music.pause();
+                musicToggle.innerText = "🔇 Music Off";
+            }
+        }
+
+        // Optional : start with lower volume
+        music.volume = 0.8;
+          
+         toggleMusic.preventDefault();
+
+    </script>
+    <script>
+
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            const content = document.querySelector(".main-content");
+
+            setTimeout(() => {
+                preloader.classList.add("slide-down");
+                setTimeout(() => {
+                    preloader.style.display = "none";
+                    content.style.display = "block";
+                }, 1000); // wait for slide up transition
+            }, 2500); // stay on screen for 2.5 seconds
+        });
+        
+
+    </script>
+    <script>
+        // Dark mode toggle
+        function toggleMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+    <!-- Movies : Pup Star_world tour -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
