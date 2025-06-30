@@ -1,11 +1,4 @@
 'use strict';
-// Toggle navbar
-const navToggler = document.querySelector("[data-nav-toggler]");
-const navbar = document.querySelector("[data-navbar]");
-
-navToggler.addEventListener("click", () => {
-  navbar.classList.toggle("active");
-});
 
 const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
 const heroSliderPrevBtn = document.querySelector("[data-prev-btn]");
@@ -56,4 +49,57 @@ window.addEventListener("scroll", () => {
 });
 
 
-    
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+  document.body.classList.add("loaded");
+  preloader.classList.add("loaded");
+});
+
+
+
+// if (send) {
+//   send.addEventListener("click", () => {
+//    console.log();
+//    result = "THank's For your info we'ill gwt in touch soon";
+//     result.textContent = toString();
+//   });
+// }
+
+
+// const send = document.getElementById("send");
+// function SendMessage() {
+//   result.textContent = message.toString();
+//   result.style.color = "green"
+// };
+
+// send.addEventListener("click", SendMessage);
+
+let message = "";
+function sendMessage() {
+  const result = document.getElementById("result");
+
+  message = "Thank's for your info we'ill get in touch soon!";
+  result.textContent = message.toString();
+  return;
+};
+
+
+
+const music = document.getElementById("bg-music");
+const musicToggle = document.getElementById("music-toggle");
+
+function toggleMusic() {
+  if (music.paused) {
+    music.play();
+    musicToggle.innerText = "🔊 Music On";
+  } else {
+    music.pause();
+    music.pause();
+    musicToggle.innerText = "🔇 Music Off";
+  }
+}
+
+// Optional : start with lower volume
+music.volume = 0.2;
+
+
