@@ -13,15 +13,13 @@
   <!-- === HEADER === -->
   <header class="header" data-header>
     <div class="container">
-      <!-- <a href="#" class="logo">Grilli</a> -->
-
-      <nav class="second-navbar" data-navbar>
+     <nav class="second-navbar" data-navbar>
         <ul class="nav-list">
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="#about" class="nav-link">Artist</a></li>
           <li><a href="#menu" class="nav-link">Awards</a></li>
-          <li><a href="#gallery" class="nav-link">Gallery</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
@@ -36,7 +34,16 @@
           <h1 class="title">Welcome to Our World</h1>
           <p class="subtitle">Experience the future today</p>
         </div>
-        <div class="background" style="background-image: url('./images/Sculpture.png');"></div>
+        <!-- <div class="background" style="background-image: url('images/Sculpture.png');"></div> -->
+        <div class="background" style="background-image: url('images/Sculpture2\ \(10\).png');"></div>
+      </div>
+      <div class="slider-item active" data-hero-slider-item>
+        <div class="content">
+          <h1 class="title">Welcome to Our World</h1>
+          <p class="subtitle">Experience the future today</p>
+        </div>
+        <!-- <div class="background" style="background-image: url('images/7227141-HSC00001-7.jpg');"></div> -->
+        <div class="background" style="background-image: url('images/Sculpture2\ \(13\).png');"></div>
       </div>
 
       <div class="slider-item" data-hero-slider-item>
@@ -44,9 +51,8 @@
           <h1 class="title">Inspiration in Motion</h1>
           <p class="subtitle">Discover amazing things</p>
         </div>
-        <div class="background" style="background-image: url('./images/7227141-HSC00001-7.jpg');"></div>
-
-
+        <!-- <div class="background" style="background-image: url('images/art.png');"></div> -->
+        <div class="background" style="background-image: url('images/Sculpture2\ \(1\).png');"></div>
       </div>
 
       <div class="slider-item" data-hero-slider-item>
@@ -54,21 +60,14 @@
           <h1 class="title">Next-Gen Innovation</h1>
           <p class="subtitle">Join the revolution</p>
         </div>
-        <div class="background" style="background-image: url('./images/art.png');"></div>
-      </div>
-      <div class="slider-item" data-hero-slider-item>
-        <div class="content">
-          <h1 class="title">Next-Gen Innovation</h1>
-          <p class="subtitle">Join the revolution</p>
-        </div>
-        <div class="background" style="background-image: url('./images/Art2.webp');"></div>
+        <!-- <div class="background" style="background-image: url('images/Art2.webp');"></div> -->
+        <div class="background" style="background-image: url('images/scul');"></div>
       </div>
 
     </div>
 
     <button class="slider-btn prev" data-prev-btn>&#10094;</button>
     <button class="slider-btn next" data-next-btn>&#10095;</button>
-    <!-- <script src="js/script.js"></script> -->
   </section>
 
   <!-- Optional: Back to Top Button -->
@@ -199,22 +198,30 @@
 
     </div>
   </section>
-  <script>
+  <!-- <script>
+    
     const navToggler = document.querySelector("[data-nav-toggler]");
     const navbar = document.querySelector("[data-navbar]");
 
     navToggler.addEventListener("click", () => {
       navbar.classList.toggle("active");
     });
-  </script>
+    
+  </script> -->
 
   <!-- 
     *Bring her back 
     *Final destination: Bloodlines
     *Karate Kid: Legends
-    *Lilo & Stitch-->
-    <a href="#reservation" class="btn">Book A Table</a>
- s
+    *Lilo & stitch
+  <a href="#reservation" class="btn">Book A Table</a>
+    <script>
+       document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        q.parentElement.classList.toggle('active');
+      });
+    });
+    </script>
   <script src="js/script.js"></script>
 </body>
 
