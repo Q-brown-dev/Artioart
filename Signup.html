@@ -1,66 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Gallery</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Gallery</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-     <div class="sidenav" id="navbar">
-        <h2>Artioart</h2>
-        <a href="index.html" id="link1"> Home</a>
-        <a href="#" id="link2"> Stories</a>
-        <a href="#" id="link3"> Store</a>
-        <a href="#" id="link4"> Artists</a>
-        <a href="#" id="link5"> Awards</a>
-        <a href="#" id="link6"> Advert</a>
-        <a href="#" id="link7"> Sources</a>
-        <a href="#" id="link8"> Featured Artist</a>
+
+<body id="body2">
+
+   <!-- Preloader -->
+    <div class="preloader" id="preloader">
+     <div class="circle"></div>
+    <p class="text logo">Artioart</p>
     </div>
+    
+  <div class="sidenav" id="navbar">
+    <h2>Artioart</h2>
+    <a href="index.html" id="link1"> Home</a>
+    <a href="#" id="link2"> Stories</a>
+    <a href="#" id="link3"> Store</a>
+    <a href="#" id="link4"> Artists</a>
+    <a href="#" id="link5"> Awards</a>
+    <a href="#" id="link6"> Advert</a>
+    <a href="#" id="link7"> Sources</a>
+    <a href="#" id="link8"> Featured Artist</a>
+  </div>
 
 
-    </div>
+  </div>
 
 
-    <div class="main">
-        <div class="navbar">
-            <h1>JOB</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="#">Artists</a>
-                <a href="#">Store</a>
-                <a href="#">Gallery</a>
-            </nav>
-        </div>
+  <div class="main">
+    
+     <!-- === HEADER === -->
+            <header class="header" data-header>
+                <div class="container">
 
 
-        <div class="form-container">
-            <div class="logo">Artioart sign Up </div>
+                    <nav class="second-navbar" data-navbar>
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">Home</a></li>
+                            <li><a href="#about" class="nav-link">Artist</a></li>
+                            <li><a href="awards.html" class="nav-link">Awards</a></li>
+                            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                            <li><a href="contact.html" class="nav-link">Contact</a></li>
+                        </ul>
+                    </nav>
 
-            <form>
+                    <button class="mode-toggle" onclick="toggleMode()">🌙 Toggle Mode</button>
 
-                <div class="first-row">
-                    <input type="text" placeholder="First name"required>
-                    <input type="text" placeholder="Last name" required>
-                    <input type="datetime-local" name="" id="" placeholder="Date of birth" required>
+
                 </div>
+            </header>
 
-                 <div class="second-row">
-                    <input type="number" name="" id="" placeholder="Age E.g 16" required>
-                    <input type="password" name="" id="" placeholder=" Set your Password •••••••" required>
-                 </div>
 
-                 <div class="last-row">
-                    <input type="number" name="" id="" placeholder="+214 123 098 576 33" required>
-                 </div>
+    <div class="form-container">
+      <div class="logo">Artioart sign Up </div>
 
-                 <button type="submit" class="Continue"><a href="index.html">Continue</a></button>
-            </form>
+      <form>
+
+        <div class="first-row">
+          <input type="text" placeholder="First name" required>
+          <input type="text" placeholder="Last name" required>
+          <input type="datetime-local" name="" id="" placeholder="Date of birth" required>
         </div>
 
-        <div class="cookies">
-            Cookies
+        <div class="second-row">
+          <input type="number" name="" id="" placeholder="Age E.g 16" required>
+          <input type="password" name="" id="" placeholder=" Set your Password •••••••" required>
         </div>
+
+        <div class="last-row">
+          <input type="number" name="" id="" placeholder="+214 123 098 576 33" required>
+        </div>
+
+        <button type="submit" class="Continue"><a href="index.html">Continue</a></button>
+      </form>
+    </div>
+
+    <a href="cookies.html">
+      <div class="cookies">
+        Cookies
+      </div>
+    </a>
+
+     <script>
+
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            const content = document.querySelector(".main-content");
+
+            setTimeout(() => {
+                preloader.classList.add("slide-down");
+                setTimeout(() => {
+                    preloader.style.display = "none";
+                    content.style.display = "block";
+                }, 1000); // wait for slide up transition
+            }, 2500); // stay on screen for 2.5 seconds
+        });
+
+    </script>
+    <script>
+        // Dark mode toggle
+        function toggleMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
 </body>
+
 </html>
