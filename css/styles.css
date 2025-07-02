@@ -134,6 +134,7 @@
 
  .dark-mode {
    background: linear-gradient(to right, black, gold, navy);
+   transition: background  4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
  }
 
 
@@ -606,7 +607,12 @@
    padding: 50px 20px;
    text-align: center;
  }
-
+.logo-img img {
+  /* background: url(../images/Photo_1751142515171.png) center center/cover no-repeat; */
+  height: 100px;
+  
+  width: 100px;
+}
  .awards-section h2 {
    font-size: 2rem;
    margin-bottom: 30px;
